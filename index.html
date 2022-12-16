@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Appointments</title>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <img
+          src="images/samantha-gades-BlIhVfXbi9s-unsplash(1).jpg"
+          alt="hero"
+        />
+        <h1 class="first">Appointments</h1>
+        <h1 class="second">App</h1>
+      </div>
+      <div class="buttons">
+        <button class="btnLeft">MOSTRA I COMPLETATI</button>
+        <button class="btnRight">MOSTRA TUTTO</button>
+      </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <section class="appointments">
+        <div class="uncompleted">
+          <div class="container">
+            <div class="title">
+              <h1>Appuntamenti</h1>
+              <h1>in</h1>
+              <h1>attesa</h1>
+            </div>
+            <div class="quote">
+              <h3>You</h3>
+              <h3>can</h3>
+              <h3>do it!</h3>
+            </div>
+          </div>
+        </div>
+        <div class="completed">
+          <div class="container">
+            <div class="title">
+              <h1>Appuntamenti</h1>
+              <h1>già</h1>
+              <h1>conclusi</h1>
+            </div>
+            <div class="quote">
+              <h3>Break</h3>
+              <h3>time!</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav class="nav">
+        <a href="#" class="nav__link nav__link--active">
+          <i class="material-icons nav__icon">person</i>
+          <span class="nav__text">Profile</span>
+        </a>
+        <a href="#" class="nav__link">
+          <i class="material-icons nav__icon">lock</i>
+          <span class="nav__text">Privacy</span>
+        </a>
+        <a href="#" class="nav__link">
+          <i class="material-icons nav__icon">settings</i>
+          <span class="nav__text">Settings</span>
+        </a>
+      </nav>
+    </main>
+    <script>
+      let mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/utils.js" type="module"></script>
+  </body>
+</html>
